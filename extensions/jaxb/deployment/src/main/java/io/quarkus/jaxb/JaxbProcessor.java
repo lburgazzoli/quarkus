@@ -7,7 +7,6 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 import javax.inject.Inject;
@@ -133,6 +132,7 @@ class JaxbProcessor {
                 .produce(new RuntimeInitializedClassBuildItem("com.sun.xml.internal.bind.v2.runtime.reflect.opt.Injector"));
 
         addResourceBundle("javax.xml.bind.Messages");
+        addResourceBundle("javax.xml.bind.util.Messages");
         addResourceBundle("com.sun.org.apache.xml.internal.serializer.utils.SerializerMessages");
         addResourceBundle("com.sun.org.apache.xml.internal.res.XMLErrorResources");
         substrateProps

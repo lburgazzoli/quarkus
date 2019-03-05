@@ -14,6 +14,7 @@ public final class FeatureBuildItem extends MultiBuildItem {
     public static final String CAMEL_INFINISPAN = "camel-infinispan";
     public static final String CAMEL_NETTY4_HTTP = "camel-netty4-http";
     public static final String CAMEL_SALESFORCE = "camel-salesforce";
+    public static final String CAMEL_ATLASMAP = "camel-atlasmap";
     public static final String CDI = "cdi";
     public static final String HIBERNATE_ORM = "hibernate-orm";
     public static final String HIBERNATE_VALIDATOR = "hibernate-validator";
