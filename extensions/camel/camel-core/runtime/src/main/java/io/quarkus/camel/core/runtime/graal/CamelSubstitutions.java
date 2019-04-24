@@ -25,21 +25,26 @@ import com.oracle.svm.core.annotate.TargetClass;
 class CamelSubstitutions {
 }
 
-@TargetClass(className = "com.sun.beans.WeakCache")
-final class Target_com_sun_beans_WeakCache<K, V> {
-    @Alias
-    public Target_com_sun_beans_WeakCache() {
-    }
-}
-
-@TargetClass(className = "java.beans.Introspector")
-final class Target_java_beans_Introspector {
-
-    @Alias
-    @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FromAlias)
-    private static Target_com_sun_beans_WeakCache<Class<?>, Method[]> declaredMethodCache = new Target_com_sun_beans_WeakCache<>();
-
-}
+/*
+ * @TargetClass(className = "com.sun.beans.WeakCache")
+ * final class Target_com_sun_beans_WeakCache<K, V> {
+ * 
+ * @Alias
+ * public Target_com_sun_beans_WeakCache() {
+ * }
+ * }
+ * 
+ * @TargetClass(className = "java.beans.Introspector")
+ * final class Target_java_beans_Introspector {
+ * 
+ * @Alias
+ * 
+ * @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FromAlias)
+ * private static Target_com_sun_beans_WeakCache<Class<?>, Method[]> declaredMethodCache = new
+ * Target_com_sun_beans_WeakCache<>();
+ * 
+ * }
+ */
 
 @TargetClass(className = "org.apache.camel.support.IntrospectionSupport")
 final class Target_org_apache_camel_support_IntrospectionSupport {
